@@ -2,7 +2,7 @@
 @config "../tailwind.config.ts";
 
 @layer base {
-    body {
-        @apply text-primary-800;
+    html {
+        @apply text-primary-900;
     }
 }

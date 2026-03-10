@@ -1,7 +1,8 @@
-import Image from "next/image";
+import "./globals.css"
+import Hero from "@/components/layout/home/Hero";
 
 export default function Home() {
-  return (
-    <div></div>
+return (
+    <Hero/>
   );
 }

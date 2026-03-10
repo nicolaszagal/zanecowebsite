@@ -62,27 +62,28 @@ export default function Navbar() {
             </div>
             <nav className="w-full border-t-1 border-secondary flex items-center justify-center">
                 <div className="max-w-7xl items-center mx-auto flex justify-between px-6 h-16">
-                  <div className="flex gap-8 text-sm font-medium">
-                        <Link href="/" className="hover:text-blue-600 transition">
-                            Inicio
-                        </Link>
-
-                        <Link href="/about" className="hover:text-blue-600 transition">
-                            Nosotros
-                        </Link>
-
-                        <Link href="/services" className="hover:text-blue-600 transition">
-                            Servicios
-                        </Link>
-
-                        <Link href="/contact" className="hover:text-blue-600 transition">
-                            Productos
-                        </Link>
-                      <Link href="/contact" className="hover:text-blue-600 transition">
-                          Contacto
+                  <div className="flex gap-8 text-sm text-primary-700 text font-medium">
+                      <Link href="/" className="hover:text-primary-400 transition">
+                          INICIO
                       </Link>
-                      <Link href="/contact" className="hover:text-blue-600 transition">
-                          Distribuidor
+                      <Link href="/about" className="hover:text-primary-400 transition">
+                          NOSOTROS
+                      </Link>
+
+                      <Link href="/services" className="hover:text-primary-400 transition">
+                          SERVICIOS
+                      </Link>
+
+                      <Link href="/contact" className="hover:text-primary-400 transition">
+                          PRODUCTOS
+                      </Link>
+
+                      <Link href="/contact" className="hover:text-primary-400 transition">
+                          CONTACTO
+                      </Link>
+
+                      <Link href="/contact" className="hover:text-primary-400 transition">
+                          DISTRIBUIDOR
                       </Link>
                     </div>
                 </div>
