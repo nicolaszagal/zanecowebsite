@@ -19,7 +19,7 @@ const config: Config = {
                 800: "#040E1B",
                 900: "#02060F",
             },
-            secondary: "#eeeeee",
+            secondary: "#dddddd",
             accent: "#333333",
             neutral: "#f5faff",
 
