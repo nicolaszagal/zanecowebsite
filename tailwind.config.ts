@@ -6,6 +6,12 @@ const config: Config = {
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        extend: {
+            fontFamily: {
+                heading: ["Montserrat", "sans-serif"],
+                body: ["Inter", "sans-serif"],
+            }
+        },
         colors: {
             primary: {
                 50: "#9bc5ff",
@@ -19,9 +25,19 @@ const config: Config = {
                 800: "#040E1B",
                 900: "#02060F",
             },
-            secondary: "#dddddd",
-            accent: "#333333",
-            neutral: "#f5faff",
+            secondary: {
+                50:"#dddddd",
+                100:"#cccccc",
+                200:"#bbbbbb",
+                300:"#aaaaaa",
+                400:"#999999",
+                500:"#888888",
+                600:"#777777",
+                700:"#666666",
+                800:"#555555",
+                900:"#444444",
+            },
+            neutral: "#f5fbff",
 
             white: "#ffffff",
             black: "#000000",

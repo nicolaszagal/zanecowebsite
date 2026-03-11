@@ -8,7 +8,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
                 {/*Logo*/}
                 <div className="flex img fluid items-center justify-center md:justify-start">
-                    <img src="/img/logo.png" alt="Logo" className="w-48 lg:w-64 object-contain"/>
+                    <img src="/img/logo.png" alt="Logo" className="w-32 lg:w-48 object-contain"/>
                 </div>
                 <div className="max-w-7xl flex gap-y-6 gap-x-8">
                     <div className="flex flex-col sm:flex-row">
@@ -21,7 +21,7 @@ export default function Navbar() {
                             </div>
                             <div className="mx-3 justify-center text-center md:text-left my-2">
                                 <p className="text-xs md:text-sm font-bold">Cercado de Lima</p>
-                                <p className="text-xs text-accent">Lima - Perú</p>
+                                <p className="text-xs text-secondary-700">Lima - Perú</p>
                             </div>
                         </div>
                         <div className="mx-4 flex justify-center">
@@ -32,7 +32,7 @@ export default function Navbar() {
                             </div>
                             <div className="mx-3 justify-center text-center md:text-left my-2">
                                 <p className="text-xs md:text-sm font-bold">Escríbenos</p>
-                                <p className="text-xs text-accent">zaneco@zanecoperu.com</p>
+                                <p className="text-xs text-secondary-700">zaneco@zanecoperu.com</p>
                             </div>
                         </div>
                     </div>
@@ -60,9 +60,9 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <nav className="w-full border-t-1 border-secondary flex items-center justify-center">
+            <nav className="w-full border-t-1 border-secondary-50 flex items-center justify-center">
                 <div className="max-w-7xl items-center mx-auto flex justify-between px-6 h-16">
-                  <div className="flex gap-8 text-sm text-primary-700 text font-medium">
+                  <div className="flex gap-8 text-sm text-primary-700 text font-bold font-heading">
                       <Link href="/" className="hover:text-primary-400 transition">
                           INICIO
                       </Link>

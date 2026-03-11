@@ -1,8 +1,30 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
+
 @layer base {
     html {
-        @apply text-primary-900;
+        @apply text-primary-800 font-body;
+        @apply bg-neutral;
     }
+
+    h1 {
+        @apply text-3xl font-heading;
+        @apply text-primary-600 font-semibold;
+    }
+
+    h2 {
+        @apply text-secondary-600;
+    }
+
+    p {
+        @apply text-secondary-800 font-light;
+        @apply text-xl leading-tight;
+    }
+
+    li {
+        @apply text-primary-700 font-medium;
+        @apply text-lg leading-tight;
+    }
+
 }

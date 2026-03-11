@@ -1,4 +1,4 @@
-import TopProductTag from "@/components/ui/TopProductTag";
+import Tag from "@/components/ui/Tag";
 import Button from "@/components/ui/Button";
 
 export default function HeroSlide({
@@ -27,14 +27,14 @@ export default function HeroSlide({
 
             {/* Contenido */}
             <div className="relative z-10 max-w-6xl ml-10 lg:ml-50 px-6 text-neutral">
-                <TopProductTag text="PRODUCTOS DESTACADOS" />
+                <Tag text="PRODUCTOS DESTACADOS" />
 
-                <h1 className="text-5xl font-extrabold leading-tight mb-4 max-w-150">
+                <h1 className="text-5xl font-extrabold leading-tight mb-4 max-w-150 text-neutral">
                     {title}
                 </h1>
 
-                <p className="max-w-xl text-xl font-bold mb-2">{subtitle}</p>
-                <p className="max-w-xl text-lg font-extralight mb-8">
+                <p className="max-w-xl text-xl font-bold mb-2 text-neutral">{subtitle}</p>
+                <p className="max-w-xl text-lg font-extralight mb-8 text-neutral">
                     {description}
                 </p>
 
