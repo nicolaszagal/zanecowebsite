@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className="bg-neutral">
+        <div className="bg-neutral sticky top-0 z-50 w-full">
             <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
                 {/*Logo*/}
                 <div className="flex img fluid items-center justify-center md:justify-start">

@@ -26,6 +26,7 @@ const config: Config = {
                 900: "#02060F",
             },
             secondary: {
+                10: "#eeeeee",
                 50:"#dddddd",
                 100:"#cccccc",
                 200:"#bbbbbb",
@@ -37,8 +38,13 @@ const config: Config = {
                 800:"#555555",
                 900:"#444444",
             },
-            neutral: "#f5fbff",
+            accent: {
+                orange: "#ff8400",
+                purple: "#c300ff",
+                green: "#14bc0e",
 
+            },
+            neutral: "#f5fbff",
             white: "#ffffff",
             black: "#000000",
             transparent: "transparent",
