@@ -24,7 +24,6 @@ export default function Products() {
                     { title: "Otros Productos", href: "/products/otros", image: "/img/product/product7.jpg" },
                 ]}
             />
-
         </section>
     )
 }

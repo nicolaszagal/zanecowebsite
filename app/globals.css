@@ -14,7 +14,7 @@
     }
 
     h2 {
-        @apply text-secondary-600;
+        @apply text-primary-700;
     }
 
     p {

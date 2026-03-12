@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-white border-t border-secondary-100">
+        <footer className="bg-neutral border-t border-secondary-100">
 
             {/* MAIN FOOTER */}
             <div className="max-w-7xl mx-auto px-6 py-16">
@@ -23,7 +23,7 @@ export default function Footer() {
                     {/* SECCIONES */}
                     <div>
 
-                        <div className="border-b-4 border-secondary-500 pb-3 mb-6">
+                        <div className="border-b-4 border-secondary-500 pb-3 mt-6 mb-6">
                             <h2 className="text-lg font-medium text-secondary-500">
                                 SECCIONES
                             </h2>
@@ -50,15 +50,15 @@ export default function Footer() {
 
                     {/* VALORES */}
                     <div>
-                        <div className="border-b-4 border-secondary-500 pb-3 mb-6">
+                        <div className="border-b-4 border-secondary-500 mt-6 pb-3 mb-6">
                             <h2 className="text-lg font-medium text-secondary-500">VALORES</h2>
                         </div>
 
-                        <ul className="flex flex-col gap-3 text-sm text-secondary-500">
-                            <li>Integridad</li>
-                            <li>Compromiso</li>
-                            <li>Respeto</li>
-                            <li>Responsabilidad Social</li>
+                        <ul className="flex flex-col gap-3 text-sm ">
+                            <li className="text-secondary-500"> Integridad</li>
+                            <li className="text-secondary-500">Compromiso</li>
+                            <li className="text-secondary-500">Respeto</li>
+                            <li className="text-secondary-500">Responsabilidad Social</li>
                         </ul>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                                 href={item.href || "#"}
                                 className="
                                 flex items-center gap-2
-                                text-primary-300
+                                text-primary-400
                                 hover:text-primary-700
                                 text-sm font-semibold
                                 transition-all

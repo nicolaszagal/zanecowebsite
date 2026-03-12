@@ -20,9 +20,9 @@ export default function MisionVision() {
                                 </svg>
                             </div>
 
-                            <h2 className="text-2xl md:text-3xl font-bold">
+                            <h1 className="text-2xl md:text-3xl font-bold">
                                 Misión
-                            </h2>
+                            </h1>
 
                             <p className="text-primary-500 text-base md:text-lg leading-relaxed">
                                 Nuestra misión es proporcionar soluciones innovadoras y de alta calidad que satisfagan las necesidades de nuestros clientes, mientras fomentamos un ambiente de trabajo colaborativo y sostenible.
@@ -41,9 +41,9 @@ export default function MisionVision() {
                                 </svg>
                             </div>
 
-                            <h2 className="text-2xl md:text-3xl font-bold">
+                            <h1 className="text-2xl md:text-3xl font-bold">
                                 Visión
-                            </h2>
+                            </h1>
 
                             <p className="text-primary-500 text-base md:text-lg leading-relaxed">
                                 Nuestra visión es ser líderes en nuestra industria, reconocidos por nuestra excelencia en el servicio al cliente, innovación constante y compromiso con la sostenibilidad.
@@ -65,9 +65,9 @@ export default function MisionVision() {
                                 </svg>
                             </div>
 
-                            <h2 className="text-2xl md:text-3xl font-bold">
+                            <h1 className="text-2xl md:text-3xl font-bold">
                                 Nuestros Valores
-                            </h2>
+                            </h1>
 
                         </div>
 
@@ -96,7 +96,7 @@ export default function MisionVision() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                                     </svg>
 
-                                    <p className="font-medium text-base">{valor}</p>
+                                    <p className="font-medium text-base text-primary-700">{valor}</p>
                                 </div>
 
                             ))}
