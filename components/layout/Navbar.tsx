@@ -100,7 +100,7 @@ export default function Navbar() {
                           NOSOTROS
                       </Link>
 
-                      <Link href="/contact" className="hover:text-primary-400 transition">
+                      <Link href="/products" className="hover:text-primary-400 transition">
                           PRODUCTOS
                       </Link>
 
