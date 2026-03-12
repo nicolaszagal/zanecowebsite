@@ -24,8 +24,8 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                                 href={item.href || "#"}
                                 className="
                                 flex items-center gap-2
-                                text-primary-50
-                                hover:text-neutral
+                                text-primary-300
+                                hover:text-primary-700
                                 text-sm font-semibold
                                 transition-all
                                 duration-200
@@ -36,7 +36,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                                 </span>
                             </Link>
                         ) : (
-                            <span className="text-neutral flex items-center gap-2 text-sm font-semibold">
+                            <span className="text-primary-700 flex items-center gap-2 text-sm font-semibold">
                                 {item.label}
                             </span>
                         )}
@@ -44,7 +44,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                         {!isLast && (
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="size-4 text-slate-600 text-neutral"
+                                className="size-4 text-slate-600 text-primary-700"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 strokeWidth={2}
