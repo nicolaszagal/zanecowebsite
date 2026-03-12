@@ -44,7 +44,7 @@ const config: Config = {
                 green: "#14bc0e",
 
             },
-            neutral: "#f5fbff",
+            neutral: "#f5fafd",
             white: "#ffffff",
             black: "#000000",
             transparent: "transparent",
