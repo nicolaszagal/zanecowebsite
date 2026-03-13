@@ -1,19 +1,20 @@
 import HeroComponent from "@/components/layout/HeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
+import RaceTrackPage from "@/components/layout/products/RaceTrackPage";
 
 export default function RaceTrack(){
     return(
         <div>
             <HeroComponent
-                title="Alfombras Antifatiga Antideslizante"
-                description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
+                title="Rollos de Caucho para pistas atléticas - Race Track"
+                description="Vaciado In Situ"
                 breadcrumbItems={[
                     { label: 'Home', href: '/' },
                     { label: 'Productos', href: '/products' },
-                    { label: 'Alfombras'}
+                    { label: 'Race Track'}
                 ]}
             />
-
+            <RaceTrackPage/>
             <ProductCardComponent
                 items={[
                     {

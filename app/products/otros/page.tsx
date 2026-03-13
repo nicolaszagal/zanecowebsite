@@ -1,19 +1,20 @@
 import HeroComponent from "@/components/layout/HeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
+import OtrosPage from "@/components/layout/products/OtrosPage";
 
 export default function Otros(){
     return(
         <div>
             <HeroComponent
-                title="Alfombras Antifatiga Antideslizante"
-                description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
+                title="Otros productos"
+                description="Vinil Antideslizante de PVC- Polipropileno PP - Polietileno de Alta densidad HDPE"
                 breadcrumbItems={[
                     { label: 'Home', href: '/' },
                     { label: 'Productos', href: '/products' },
-                    { label: 'Alfombras'}
+                    { label: 'Otros Productos'}
                 ]}
             />
-
+            <OtrosPage/>
             <ProductCardComponent
                 items={[
                     {

@@ -1,18 +1,20 @@
-import HeroComponent from "@/components/layout/HeroComponent";
+import ProductHeroComponent from "@/components/layout/ProductHeroComponent";
 import AlfombrasPage from "@/components/layout/products/AlfombrasPage";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
 
 export default function Alfombras(){
     return(
         <div>
-            <HeroComponent
+            <ProductHeroComponent
                 title="Alfombras Antifatiga Antideslizante"
                 description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
+                imageUrl="/img/product/product1.jpg"
                 breadcrumbItems={[
                     { label: 'Home', href: '/' },
                     { label: 'Productos', href: '/products' },
                     { label: 'Alfombras'}
                 ]}
+                breadcrumbVariant="secondary"
             />
             <AlfombrasPage/>
             <ProductCardComponent

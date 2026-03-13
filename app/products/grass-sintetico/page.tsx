@@ -1,19 +1,20 @@
 import HeroComponent from "@/components/layout/HeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
+import GrassSinteticoPage from "@/components/layout/products/GrassSinteticoPage";
 
 export default function GrassSintetico(){
     return(
         <div>
             <HeroComponent
-                title="Alfombras Antifatiga Antideslizante"
-                description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
+                title="Grass Sintético para áreas de juego y paisajismo"
+                description="Grass Sintético de doble composición no requiere el uso de relleno."
                 breadcrumbItems={[
                     { label: 'Home', href: '/' },
                     { label: 'Productos', href: '/products' },
-                    { label: 'Alfombras'}
+                    { label: 'Grass Sintético'}
                 ]}
             />
-
+            <GrassSinteticoPage/>
             <ProductCardComponent
                 items={[
                     {

@@ -1,19 +1,20 @@
 import HeroComponent from "@/components/layout/HeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
+import RollosPage from "@/components/layout/products/RollosPage";
 
 export default function Rollos(){
     return(
         <div>
             <HeroComponent
-                title="Alfombras Antifatiga Antideslizante"
-                description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
+                title="Rollos de Caucho Antideslizante"
+                description="Rollos antideslizante de caucho para uso industrial o deportivo"
                 breadcrumbItems={[
                     { label: 'Home', href: '/' },
                     { label: 'Productos', href: '/products' },
-                    { label: 'Alfombras'}
+                    { label: 'Rollos'}
                 ]}
             />
-
+            <RollosPage/>
             <ProductCardComponent
                 items={[
                     {

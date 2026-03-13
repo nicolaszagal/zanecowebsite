@@ -9,12 +9,20 @@ type BreadcumbItem = {
 
 interface BreadcrumbProps {
     items: BreadcumbItem[]
+    variant?: "primary" | "secondary"
 }
 
-export default function Breadcrumb({ items }: BreadcrumbProps) {
+export default function Breadcrumb({ items, variant="primary" }: BreadcrumbProps) {
+
+    const variants = {
+        primary: "text-primary-400",
+        secondary: "text-neutral"
+    }
+
     return(
-        <nav className="flex items center gap-2 text-sm">
+        <nav className="flex items-center gap-2 text-sm">
             {items.map((item, index) => {
+
                 const isLast = index === items.length - 1
 
                 return(
@@ -22,21 +30,19 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                         {!isLast ? (
                             <Link
                                 href={item.href || "#"}
-                                className="
+                                className={`
                                 flex items-center gap-2
-                                text-primary-400
-                                hover:text-primary-700
+                                ${variants[variant]}
                                 text-sm font-semibold
-                                transition-all
-                                duration-200
-                                group"
+                                transition-all duration-200
+                                group`}
                             >
                                 <span className="transition-transform duration-200 group-hover:translate-y-[1px]">
                                     {item.label}
                                 </span>
                             </Link>
                         ) : (
-                            <span className="text-primary-700 flex items-center gap-2 text-sm font-semibold">
+                            <span className={`flex items-center gap-2 text-sm font-semibold ${variants[variant]}`}>
                                 {item.label}
                             </span>
                         )}
@@ -44,7 +50,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                         {!isLast && (
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="size-4 text-slate-600 text-primary-700"
+                                className={`size-4 text-slate-600 ${variants[variant]}`}
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 strokeWidth={2}

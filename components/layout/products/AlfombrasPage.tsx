@@ -42,7 +42,7 @@ export default function AlfombrasPage() {
                             <div className="bg-accent-green w-[10px] h-[10px] rounded-2xl items-center m-3"></div>
                             <h1 className="text-2xl md:text-3xl font-bold">La Solución</h1>
                         </div>
-                        <p className="px-3text-primary-700 text-base md:text-lg leading-relaxed text-justify">
+                        <p className="px-3 text-primary-700 text-base md:text-lg leading-relaxed text-justify">
                             Las personas que trabajan de pie sobre alfombras
                             antifatiga son significativamente menos propensas
                             a experimentar fatiga que las que están sobre
@@ -78,7 +78,7 @@ export default function AlfombrasPage() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-primary-500 shrink-0">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                                 </svg>
-                                <p>{aplicacion}</p>
+                                <p className="text-primary-700">{aplicacion}</p>
                             </div>
                         ))}
                     </div>

@@ -1,19 +1,20 @@
 import HeroComponent from "@/components/layout/HeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
+import LosetasPage from "@/components/layout/products/LosetasPage";
 
 export default function Losetas(){
     return(
         <div>
             <HeroComponent
-                title="Alfombras Antifatiga Antideslizante"
-                description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
+                title="Losetas de Caucho Antigolpes"
+                description="Piso antideslizante - Posee una óptima resistencia al resbalamiento estando mojado."
                 breadcrumbItems={[
                     { label: 'Home', href: '/' },
                     { label: 'Productos', href: '/products' },
-                    { label: 'Alfombras'}
+                    { label: 'Losetas'}
                 ]}
             />
-
+            <LosetasPage/>
             <ProductCardComponent
                 items={[
                     {

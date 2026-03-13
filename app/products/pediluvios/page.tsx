@@ -1,19 +1,20 @@
 import HeroComponent from "@/components/layout/HeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
+import PediluviosPage from "@/components/layout/products/PediluviosPage";
 
 export default function Pediluvio(){
     return(
         <div>
             <HeroComponent
-                title="Alfombras Antifatiga Antideslizante"
+                title="Pediluvios - Bandeja para Desinfección de Calzado"
                 description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
                 breadcrumbItems={[
                     { label: 'Home', href: '/' },
                     { label: 'Productos', href: '/products' },
-                    { label: 'Alfombras'}
+                    { label: 'Pediluvios'}
                 ]}
             />
-
+            <PediluviosPage/>
             <ProductCardComponent
                 items={[
                     {
