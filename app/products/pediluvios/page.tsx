@@ -1,11 +1,11 @@
-import HeroComponent from "@/components/layout/HeroComponent";
+import ProductHeroComponent from "@/components/layout/ProductHeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
 import PediluviosPage from "@/components/layout/products/PediluviosPage";
 
 export default function Pediluvio(){
     return(
         <div>
-            <HeroComponent
+            <ProductHeroComponent
                 title="Pediluvios - Bandeja para Desinfección de Calzado"
                 description="Ley 29783. - Ley de Seguridad y Salud en el Trabajo, Agosto 2011."
                 breadcrumbItems={[
@@ -13,6 +13,8 @@ export default function Pediluvio(){
                     { label: 'Productos', href: '/products' },
                     { label: 'Pediluvios'}
                 ]}
+                imageUrl="/img/product/product5.jpg"
+                breadcrumbVariant="secondary"
             />
             <PediluviosPage/>
             <ProductCardComponent

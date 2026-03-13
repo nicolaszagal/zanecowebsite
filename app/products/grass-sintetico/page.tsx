@@ -1,11 +1,11 @@
-import HeroComponent from "@/components/layout/HeroComponent";
+import ProductHeroComponent from "@/components/layout/ProductHeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
 import GrassSinteticoPage from "@/components/layout/products/GrassSinteticoPage";
 
 export default function GrassSintetico(){
     return(
         <div>
-            <HeroComponent
+            <ProductHeroComponent
                 title="Grass Sintético para áreas de juego y paisajismo"
                 description="Grass Sintético de doble composición no requiere el uso de relleno."
                 breadcrumbItems={[
@@ -13,6 +13,8 @@ export default function GrassSintetico(){
                     { label: 'Productos', href: '/products' },
                     { label: 'Grass Sintético'}
                 ]}
+                imageUrl="/img/product/product6.jpg"
+                breadcrumbVariant="secondary"
             />
             <GrassSinteticoPage/>
             <ProductCardComponent

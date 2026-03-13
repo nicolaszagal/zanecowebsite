@@ -1,11 +1,11 @@
-import HeroComponent from "@/components/layout/HeroComponent";
+import ProductHeroComponent from "@/components/layout/ProductHeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
 import RaceTrackPage from "@/components/layout/products/RaceTrackPage";
 
 export default function RaceTrack(){
     return(
         <div>
-            <HeroComponent
+            <ProductHeroComponent
                 title="Rollos de Caucho para pistas atléticas - Race Track"
                 description="Vaciado In Situ"
                 breadcrumbItems={[
@@ -13,6 +13,8 @@ export default function RaceTrack(){
                     { label: 'Productos', href: '/products' },
                     { label: 'Race Track'}
                 ]}
+                imageUrl="/img/product/product4.jpg"
+                breadcrumbVariant="secondary"
             />
             <RaceTrackPage/>
             <ProductCardComponent

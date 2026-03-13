@@ -14,7 +14,6 @@ export default function About() {
                     { label: "Inicio", href: "/" },
                     { label: "Nosotros" },
                 ]}
-                variant="default"
             />
             <AboutUs/>
             <AboutGalery/>

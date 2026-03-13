@@ -1,11 +1,11 @@
-import HeroComponent from "@/components/layout/HeroComponent";
+import ProductHeroComponent from "@/components/layout/ProductHeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
 import RollosPage from "@/components/layout/products/RollosPage";
 
 export default function Rollos(){
     return(
         <div>
-            <HeroComponent
+            <ProductHeroComponent
                 title="Rollos de Caucho Antideslizante"
                 description="Rollos antideslizante de caucho para uso industrial o deportivo"
                 breadcrumbItems={[
@@ -13,6 +13,8 @@ export default function Rollos(){
                     { label: 'Productos', href: '/products' },
                     { label: 'Rollos'}
                 ]}
+                imageUrl="/img/product/product3.jpg"
+                breadcrumbVariant="secondary"
             />
             <RollosPage/>
             <ProductCardComponent

@@ -1,11 +1,11 @@
-import HeroComponent from "@/components/layout/HeroComponent";
+import ProductHeroComponent from "@/components/layout/ProductHeroComponent";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
 import LosetasPage from "@/components/layout/products/LosetasPage";
 
 export default function Losetas(){
     return(
         <div>
-            <HeroComponent
+            <ProductHeroComponent
                 title="Losetas de Caucho Antigolpes"
                 description="Piso antideslizante - Posee una óptima resistencia al resbalamiento estando mojado."
                 breadcrumbItems={[
@@ -13,6 +13,8 @@ export default function Losetas(){
                     { label: 'Productos', href: '/products' },
                     { label: 'Losetas'}
                 ]}
+                imageUrl="/img/product/product2.jpg"
+                breadcrumbVariant="secondary"
             />
             <LosetasPage/>
             <ProductCardComponent
