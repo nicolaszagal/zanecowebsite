@@ -107,10 +107,6 @@ export default function Navbar() {
                       <Link href="/contact" className="hover:text-primary-400 transition">
                           CONTACTO
                       </Link>
-
-                      <Link href="/distributor" className="hover:text-primary-400 transition">
-                          DISTRIBUIDOR
-                      </Link>
                   </div>
                 </div>
             </nav>

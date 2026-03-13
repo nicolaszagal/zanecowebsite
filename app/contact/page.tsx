@@ -6,7 +6,7 @@ export default function Contact() {
         <section>
             <HeroComponent
                 title="Contáctanos"
-                description="Soluciones en alfombras y pisos de caucho"
+                description="Solicita cotizaciones, asesoría personalizada o si deseas ser nuestro distribuidor."
                 breadcrumbItems={[
                     { label: "Inicio", href: "/" },
                     { label: "Contacto" },
@@ -15,7 +15,7 @@ export default function Contact() {
             <div className="bg-white w-full py-24 px-6">
                 <div className="max-w-7xl mx-auto bg-white">
                     <h1>Envíanos tus consultas</h1>
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto mt-10">
                         <div className="flex-col max-w-sm">
                             <h1 className="text-lg my-10">Zagal Negocios Corporativos Perú S.A.C.</h1>
                             <div className="flex flex-row">

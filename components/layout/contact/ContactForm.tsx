@@ -1,51 +1,144 @@
 "use client"
-import { useForm, ValidationError } from "@formspree/react";
-import Button from "@/components/ui/Button";
+
+import { useState } from "react"
+import Button from "@/components/ui/Button"
 
 export default function ContactForm() {
-    const [state, handleSubmit] = useForm("FORM_ID");
 
-    if (state.succeeded) {
-        return <p>Gracias por tu consulta. Te atenderemos pronto!</p>;
+    const [loading, setLoading] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [error, setError] = useState("")
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+
+        setLoading(true)
+        setError("")
+
+        const formData = new FormData(e.currentTarget)
+
+        const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            message: formData.get("message"),
+            company: formData.get("company") // honeypot
+        }
+
+        try {
+
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+
+            if (!res.ok) {
+                throw new Error("Error al enviar")
+            }
+
+            setSuccess(true)
+            e.currentTarget.reset()
+
+        } catch {
+            setError("No se pudo enviar el mensaje.")
+        }
+
+        setLoading(false)
     }
+
+    if (success) {
+        return (
+            <section className="bg-neutral py-24 px-6 md:px-16 rounded-xl text-center">
+                <p className="text-primary-700 text-lg font-semibold">
+                    Gracias por tu consulta. Te responderemos pronto.
+                </p>
+            </section>
+        )
+    }
+
     return (
-        <section className="bg-neutral w-full py-24 px-16 rounded-xl items-center">
-            <form className="fs-form" onSubmit={handleSubmit}>
+        <section className="bg-neutral py-24 px-6 md:px-16 rounded-xl">
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+
+                {/* honeypot anti spam */}
+                <input
+                    type="text"
+                    name="company"
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="flex flex-col">
-                        <div className="fs-field flex flex-col w-full">
-                            <label className="fs-label text-primary-700 font-semibold mb-2" htmlFor="name">
+
+                    <div className="space-y-6">
+
+                        <div className="flex flex-col">
+                            <label className="text-primary-700 font-semibold mb-2">
                                 Nombre Completo
                             </label>
-                            <input className="fs-input bg-white rounded-lg border-1 border-primary-500 py-2 mb-10 px-3" id="name" name="name" required/>
+
+                            <input
+                                name="name"
+                                required
+                                className="bg-white rounded-lg border border-primary-500 py-2 px-3 focus:ring-2 focus:ring-primary-500 outline-none"
+                            />
                         </div>
-                        <div className="fs-field flex flex-col w-full">
-                            <label className="fs-label text-primary-700 font-semibold mb-2" htmlFor="email">
+
+                        <div className="flex flex-col">
+                            <label className="text-primary-700 font-semibold mb-2">
                                 Email
                             </label>
-                            <input className="fs-input bg-white rounded-lg border-1 border-primary-500 py-2 mb-10 px-3" id="email" name="email" required/>
+
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                className="bg-white rounded-lg border border-primary-500 py-2 px-3 focus:ring-2 focus:ring-primary-500 outline-none"
+                            />
                         </div>
-                        <div className="fs-field flex flex-col w-full">
-                            <label className="fs-label text-primary-700 font-semibold mb-2" htmlFor="phone">
+
+                        <div className="flex flex-col">
+                            <label className="text-primary-700 font-semibold mb-2">
                                 Teléfono
                             </label>
-                            <input className="fs-input bg-white rounded-lg border-1 border-primary-500 py-2 mb-10 px-3" id="phone" name="phone" required/>
+
+                            <input
+                                name="phone"
+                                required
+                                className="bg-white rounded-lg border border-primary-500 py-2 px-3 focus:ring-2 focus:ring-primary-500 outline-none"
+                            />
                         </div>
+
                     </div>
-                    <div className="fs-field flex flex-col w-full">
-                        <label className="fs-label text-primary-700 font-semibold mb-2" htmlFor="message">
+
+                    <div className="flex flex-col">
+                        <label className="text-primary-700 font-semibold mb-2">
                             Consulta
                         </label>
+
                         <textarea
-                            className="fs-textarea bg-white rounded-lg border-1 border-primary-500 py-2 mb-10 px-3 h-full"
-                            id="message"
                             name="message"
                             required
+                            className="bg-white h-full rounded-lg border border-primary-500 py-2 px-3 min-h-[180px] focus:ring-2 focus:ring-primary-500 outline-none"
                         />
                     </div>
+
                 </div>
-                <div className="fs-button-group flex justify-end">
-                    <Button text="Enviar" variant="primary"/>
+
+                {error && (
+                    <p className="text-red-500">{error}</p>
+                )}
+
+                <div className="flex justify-end pt-6">
+                    <Button
+                        text={loading ? "Enviando..." : "Enviar"}
+                        variant="primary"
+                    />
                 </div>
             </form>
         </section>
