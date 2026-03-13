@@ -1,6 +1,6 @@
 "use client"
 import HeroComponent from "@/components/layout/HeroComponent";
-import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
+import CategoryCardComponent from "@/components/layout/products/CategoryCardComponent";
 
 export default function Products() {
     return(
@@ -13,7 +13,7 @@ export default function Products() {
                     { label: "Productos" }
                 ]}
             />
-            <ProductCardComponent
+            <CategoryCardComponent
                 items={[
                     { title: "Alfombras Antifatiga y Antideslizante", href: "/products/alfombras", image: "/img/product/product1.jpg" },
                     { title: "Losetas de Caucho", href: "/products/losetas", image: "/img/product/product2.jpg" },

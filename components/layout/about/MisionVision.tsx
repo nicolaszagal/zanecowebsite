@@ -24,7 +24,7 @@ export default function MisionVision() {
                                 Misión
                             </h1>
 
-                            <p className="text-primary-500 text-base md:text-lg leading-relaxed">
+                            <p className="text-primary-500 text-base md:text-lg leading-relaxed text-justify">
                                 Nuestra misión es proporcionar soluciones innovadoras y de alta calidad que satisfagan las necesidades de nuestros clientes, mientras fomentamos un ambiente de trabajo colaborativo y sostenible.
                             </p>
 
@@ -45,7 +45,7 @@ export default function MisionVision() {
                                 Visión
                             </h1>
 
-                            <p className="text-primary-500 text-base md:text-lg leading-relaxed">
+                            <p className="text-primary-500 text-base md:text-lg leading-relaxed text-justify">
                                 Nuestra visión es ser líderes en nuestra industria, reconocidos por nuestra excelencia en el servicio al cliente, innovación constante y compromiso con la sostenibilidad.
                             </p>
 

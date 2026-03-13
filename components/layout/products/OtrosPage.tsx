@@ -1,4 +1,4 @@
-export default function AlfombrasPage() {
+export default function OtrosPage() {
     return(
         <div className="bg-white py-24 px-6">
             <div className="max-w-7xl mx-auto">

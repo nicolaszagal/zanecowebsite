@@ -1,8 +1,7 @@
 import HeroComponent from "@/components/layout/HeroComponent";
-import AlfombrasPage from "@/components/layout/products/AlfombrasPage";
 import ProductCardComponent from "@/components/layout/products/ProductCardComponent";
 
-export default function Alfombras(){
+export default function Otros(){
     return(
         <div>
             <HeroComponent
@@ -14,7 +13,7 @@ export default function Alfombras(){
                     { label: 'Alfombras'}
                 ]}
             />
-            <AlfombrasPage/>
+
             <ProductCardComponent
                 items={[
                     {

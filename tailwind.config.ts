@@ -42,6 +42,7 @@ const config: Config = {
                 orange: "#ff8400",
                 purple: "#c300ff",
                 green: "#14bc0e",
+                red: "#ff4040",
 
             },
             neutral: "#f5fafd",

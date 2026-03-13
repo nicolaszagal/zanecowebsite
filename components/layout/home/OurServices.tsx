@@ -15,8 +15,8 @@ export default function OurServices() {
                     {/* TEXTO */}
                     <div>
                         <Tag text="Servicio Principal" variant="secondary" />
-                        <h2 className="mt-4">Suministro y Asesoría en Soluciones de Caucho</h2>
-                        <p className="mt-4 text-lg">Somos especialistas en la comercialización y distribución de pisos de caucho de alta calidad. Contamos con una gama diversa de productos que se adaptan a las diferentes necesidades de nuestros clientes.</p>
+                        <h1 className="mt-4">Suministro y Asesoría en Soluciones de Caucho</h1>
+                        <p className="mt-4 text-lg text-justify">Somos especialistas en la comercialización y distribución de pisos de caucho de alta calidad. Contamos con una gama diversa de productos que se adaptan a las diferentes necesidades de nuestros clientes.</p>
 
                         <ul className="mt-8 space-y-6">
                             <li>
@@ -139,7 +139,7 @@ export default function OurServices() {
 
                         <h1 className="mb-6">¿Por qué elegir nuestros servicios?</h1>
 
-                        <p className="text-lg leading-relaxed mb-10">
+                        <p className="text-lg leading-relaxed mb-10 text-justify">
                             Con más de 20 años de experiencia en la industria del caucho,
                             garantizamos productos de calidad con un servicio personalizado
                             adaptado a las necesidades de tu negocio.
