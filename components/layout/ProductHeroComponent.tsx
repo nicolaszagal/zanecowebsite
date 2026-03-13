@@ -11,7 +11,7 @@ type HeroProps = {
 export default function ProductHeroComponent({ title, description, imageUrl, breadcrumbItems = [], breadcrumbVariant }: HeroProps) {
     return (
         <section>
-            <img className="object-cover w-full h-100 brightness-60" src={imageUrl} alt={title} />
+            <img className="object-cover w-full h-100 brightness-40" src={imageUrl} alt={title} />
             <div className="max-w-7xl mx-auto relative bottom-10">
                 <div className="absolute inset-x-10 bottom-10">
                     {breadcrumbItems.length > 0 && (

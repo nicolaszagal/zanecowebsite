@@ -7,8 +7,8 @@ export default function Navbar() {
         <div className="bg-neutral sticky top-0 z-50 w-full shadow-md">
             <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
                 {/*Logo*/}
-                <div className="flex img fluid items-center justify-center md:justify-start">
-                    <img src="/img/logo.png" alt="Logo" className="w-32 lg:w-48 object-contain"/>
+                <div className="flex flex-col img fluid items-center justify-center md:justify-start">
+                    <img src="/img/logo.png" alt="Logo" className="w-32 lg:w-64 object-contain"/>
                 </div>
                 <div className="max-w-7xl flex gap-y-6 gap-x-8">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
