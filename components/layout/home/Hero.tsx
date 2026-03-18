@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import HeroSlide from "@/components/layout/home/HeroSlide";
 
 type ButtonVariant = "primary" | "secondary";
@@ -18,7 +18,6 @@ type HeroSlideType = {
 };
 
 export default function Hero() {
-
     const slides: HeroSlideType[] = [
         {
             backgroundImage: "/img/home/hero.jpg",
@@ -40,17 +39,47 @@ export default function Hero() {
                 { text: "Solicitar Cotización", variant: "secondary" },
             ],
         }
-    ]
+    ];
 
     const [currentSlide, setCurrentSlide] = useState(0);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Clear and restart interval
+    const resetInterval = useCallback(() => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+        intervalRef.current = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 8000);
+    }, [slides.length]);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 5000);
+        resetInterval();
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [resetInterval]);
 
-        return () => clearInterval(interval);
-    }, [slides.length]);
+    // Wrap controller handlers to reset timer after manual change
+    const goToPrevious = () => {
+        setCurrentSlide((prev) =>
+            prev === 0 ? slides.length - 1 : prev - 1
+        );
+        resetInterval();
+    };
+
+    const goToNext = () => {
+        setCurrentSlide((prev) =>
+            prev === slides.length - 1 ? 0 : prev + 1
+        );
+        resetInterval();
+    };
+
+    const goToSlide = (idx: number) => {
+        setCurrentSlide(idx);
+        resetInterval();
+    };
 
     return (
         <section className="relative overflow-hidden">
@@ -61,6 +90,37 @@ export default function Hero() {
                 {slides.map((slide, index) => (
                     <HeroSlide key={index} {...slide} />
                 ))}
+            </div>
+            {/* Slide controllers */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-4 z-20">
+                <button
+                    aria-label="Anterior"
+                    onClick={goToPrevious}
+                    className="bg-neutral-800/60 text-white px-3 py-2 rounded-full hover:bg-neutral-700 transition"
+                >
+                    &#8592;
+                </button>
+                <div className="flex gap-2 items-center">
+                    {slides.map((_, idx) => (
+                        <button
+                            key={idx}
+                            className={`w-3 h-3 rounded-full transition ${
+                                idx === currentSlide
+                                    ? "bg-neutral"
+                                    : "bg-primary-500"
+                            }`}
+                            onClick={() => goToSlide(idx)}
+                            aria-label={`Go to slide ${idx + 1}`}
+                        />
+                    ))}
+                </div>
+                <button
+                    aria-label="Siguiente"
+                    onClick={goToNext}
+                    className="bg-neutral-800/60 text-white px-3 py-2 rounded-full hover:bg-neutral-700 transition"
+                >
+                    &#8594;
+                </button>
             </div>
         </section>
     );
