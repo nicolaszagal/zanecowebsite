@@ -38,6 +38,16 @@ export default function Hero() {
                 { text: "Ver Catálogo", variant: "primary" },
                 { text: "Solicitar Cotización", variant: "secondary" },
             ],
+        },
+        {
+            backgroundImage: "/img/home/hero3.jpg",
+            title: "Alfombras  de Caucho",
+            subtitle: "Antifatiga Antideslizante",
+            description: "LEY 29783. - Ley de seguridad y salud en el trabajo.",
+            buttons: [
+                { text: "Ver Catálogo", variant: "primary" },
+                { text: "Solicitar Cotización", variant: "secondary" },
+            ],
         }
     ];
 

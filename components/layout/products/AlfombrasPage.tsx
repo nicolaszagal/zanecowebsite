@@ -1,6 +1,6 @@
 export default function AlfombrasPage() {
     return(
-        <div className="bg-white py-24 px-6">
+        <div className="bg-white py-20 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-20">
                     <h1>Descripción</h1>

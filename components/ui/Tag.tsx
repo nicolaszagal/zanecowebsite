@@ -1,6 +1,6 @@
 type TagProps = {
     text: string;
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "accent";
 }
 
 export default function Tag({text, variant = "primary"}: TagProps) {
@@ -8,7 +8,8 @@ export default function Tag({text, variant = "primary"}: TagProps) {
 
     const variants = {
         primary: "bg-primary-500/80 border border-primary-300 text-primary-50",
-        secondary: "bg-primary-50/30 border border-primary-100 text-primary-200"
+        secondary: "bg-primary-50/30 border border-primary-100 text-primary-200",
+        accent: "bg-accent-red border border-accent-red text-neutral",
     }
 
     return (
