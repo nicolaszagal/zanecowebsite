@@ -21,7 +21,7 @@ export default function Alfombras(){
                 items={[
                     {
                         title: 'Modelo GM - 902',
-                        description: 'Alfombra con broches laterales que permite la unión de varias.',
+                        description: 'Alfombra con broches laterales que permite la unión de varias unidades.',
                         measure: '91.4cm x 91.4cm x 15mm',
                         color: 'Negro',
                         application: 'Áreas húmedas, cocinas, lavanderías, industria pesca, hospitales, criaderos, agro industria, etc.',
@@ -30,7 +30,7 @@ export default function Alfombras(){
                     },
                     {
                         title: 'Modelo GM - 902 MOD',
-                        description: 'Cada alfombra cuenta con gruñas cada 30 cm, permitiendo obtener modulos de menor tañamo',
+                        description: 'Los modulos de 91cm x 91cm son unidos por medio de broches laterales, con la finalidad de expandir el tamaño de estos. Cada alfombra cuenta con gruñas cada 30 cm, permitiendo obtener modulos de menor dimensión',
                         measure: 'Múltiplos de 30cm x 30cm x 15mm',
                         color: 'Negro',
                         application: 'Áreas húmedas, cocinas, lavanderías, industria pesca, hospitales, criaderos, agro industria, etc.',
@@ -39,7 +39,7 @@ export default function Alfombras(){
                     },
                     {
                         title: 'Modelo RL - 102',
-                        description: 'Alfombra con marcos biselados.',
+                        description: 'Alfombra antifatiga y antideslizante con marcos biselados.',
                         measure: '158cm x 98cm x 15mm',
                         color: 'Negro',
                         application: 'Zonas de alto tránsito, áreas húmedas, cocinas, embarcaciones pesqueras, hospitales, criaderos, agro industria, etc.',
@@ -49,7 +49,7 @@ export default function Alfombras(){
                     {
                         title: 'Modelo GM - 303',
                         description: 'Ideal para uso industrial, facilita el drenaje de líquidos.',
-                        measure: '150cm x 90cm x 20mm',
+                        measure: '150cm x 90cm x 16mm o 20mm (Consultar disponibilidad)',
                         color: 'Negro',
                         application: 'Zonas de alto tránsito, áreas húmedas, cocinas, embarcaciones pesqueras, hospitales, criaderos, agro industria, etc.',
                         image1: '/img/product/alfombras/GM-303.jpg',
@@ -83,39 +83,9 @@ export default function Alfombras(){
                         image2: '/img/product/alfombras/GM-701_2.jpg',
                     },
                     {
-                        title: 'Modelo GM - 420',
-                        description: 'Alfombras de caucho solo antideslizante.',
-                        measure: '200cm x 100cm x 10mm',
-                        color: 'Negro',
-                        application: 'Zonas de alto tránsito, áreas húmedas, rampas, embarcaciones pesqueras, hospitales, etc.',
-                        image1: '/img/product/alfombras/GM-420.jpg',
-                        image2: '/img/product/alfombras/GM-420_2.jpg',
-                        tagText: 'Bajo Proyecto de Importación'
-                    },
-                    {
-                        title: 'Modelo GM - 421',
-                        description: 'Alfombras de caucho solo antideslizante.',
-                        measure: '183cm x 122cm x 17mm',
-                        color: 'Negro',
-                        application: 'Zonas de alto tránsito, áreas húmedas, embarcaciones pesqueras, criaderos, agro industria, etc.',
-                        image1: '/img/product/alfombras/GM-421.jpg',
-                        image2: '/img/product/alfombras/GM-421_2.jpg',
-                        tagText: 'Bajo Proyecto de Importación'
-                    },
-                    {
-                        title: 'Modelo GM - 422',
-                        description: 'Alfombras de caucho solo antideslizante.',
-                        measure: '122cm x 72cm x 20mm',
-                        color: 'Negro',
-                        application: 'Alto tránsito, áreas húmedas, lavanderías, industria pesca, criaderos, agro industria, etc.',
-                        image1: '/img/product/alfombras/GM-422.jpg',
-                        image2: '/img/product/alfombras/GM-422_2.jpg',
-                        tagText: 'Bajo Proyecto de Importación'
-                    },
-                    {
                         title: 'Modelo GM - 510',
-                        description: '',
-                        measure: '100cm x 81cm x 16mm',
+                        description: 'Diseño de pines verticales para limpieza de calzado. Cuenta con border biselados',
+                        measure: '98cm x 81cm x 16mm',
                         color: 'Negro',
                         application: 'Ingresos, atrapa mugre, limpia pies para industria en general. Se puede agregar liquido desinfectante dentro de los pines , sin exceder el límite del borde perimetral para ser usado como un pediluvio.',
                         image1: '/img/product/alfombras/GM-510.jpg',
@@ -141,7 +111,7 @@ export default function Alfombras(){
                     },
                     {
                         title: 'Modelo BM-013',
-                        description: '',
+                        description: 'Alfombra antifatiga con diseño de burbujas con bisel perimetral.',
                         measure: '90cm x 60cm x 13mm',
                         color: 'Negro',
                         application: 'Estaciones de trabajo, zonas de packing y picking almacenes, recepciones e industrias en general. El diseño de burbujas amortigua el peso, proporcionando una sensación agradable de confort.',
@@ -150,7 +120,7 @@ export default function Alfombras(){
                     },
                     {
                         title: 'Modelo BM-013 P',
-                        description: 'Es posible unir varias alfombras, haciendo un corte en un extremo y pegándolas',
+                        description: 'Alfombra antifatiga con diseño de burbujas con bisel perimetral. Es posible unir varias alfombras, haciendo un corte en un extremo y pegándolas.',
                         measure: '170cm x 60cm x 13mm | 250cm x 60cm x 13mm. ',
                         color: 'Negro',
                         application: 'Estaciones de trabajo, zonas de packing y picking almacenes, recepciones e industrias en general.El diseño de burbujas amortigua el peso , proporcionando una sensación agradable de confort.',
@@ -159,8 +129,8 @@ export default function Alfombras(){
                     },
                     {
                         title: 'Modelo MAT-016',
-                        description: 'Consta de una base de tela sintetica de 1 mm de espesor, un soporte de Etil Vinil Acetato de 12mm y recubierto con una lámina de caucho antideslizante de 3mm.',
-                        measure: '90cm x 60cm x 16mm',
+                        description: 'Consta de una base de tela sintética de 1 mm de espesor, un soporte de Etil Vinil Acetato de 12mm y recubierto con una lámina de caucho antideslizante de 3mm con diseño diamantado o estoperol. Áreas secas. Fabricación a solicitud del cliente',
+                        measure: '90cm x 60cm x 16mm | 120cm x 60xm x 16mm | 150cm x 60cm x 16mm (Medidas frecuentes)',
                         color: 'Negro',
                         application: 'Estaciones de trabajo con áreas secas. Zonas de embalaje, áreas de trabajo, lineas de producción, toda zona en donde se busque minimizar indices de fatiga del trabajador.',
                         image1: '/img/product/alfombras/MAT-016.jpg',
@@ -174,6 +144,36 @@ export default function Alfombras(){
                         application: 'Alfombra para secado de calzado a la salida del paso por el pediluvio. Desinfección y sanitización de Ingresos en zonas controladas, limpia calzado.  Industria en general, comercios, accesos e ingresos.',
                         image1: '/img/product/alfombras/HR-960.jpg',
                         image2: '/img/product/alfombras/HR-960_2.jpg',
+                    },
+                    {
+                        title: 'Modelo GM - 420',
+                        description: 'Alfombras de caucho solo antideslizante.',
+                        measure: '200cm x 100cm x 10mm',
+                        color: 'Negro',
+                        application: 'Zonas ganaderas, alto tránsito, áreas húmedas, rampas, embarcaciones pesqueras, etc.',
+                        image1: '/img/product/alfombras/GM-420.jpg',
+                        image2: '/img/product/alfombras/GM-420_2.jpg',
+                        tagText: 'Bajo Proyecto de Importación'
+                    },
+                    {
+                        title: 'Modelo GM - 421',
+                        description: 'Alfombras de caucho solo antideslizante.',
+                        measure: '183cm x 122cm x 17mm',
+                        color: 'Negro',
+                        application: 'Zonas de alto tránsito, áreas húmedas, embarcaciones pesqueras, criaderos, agro industria, etc.',
+                        image1: '/img/product/alfombras/GM-421.jpg',
+                        image2: '/img/product/alfombras/GM-421_2.jpg',
+                        tagText: 'Bajo Proyecto de Importación'
+                    },
+                    {
+                        title: 'Modelo GM - 422',
+                        description: 'Alfombras de caucho solo antideslizante.',
+                        measure: '122cm x 72cm x 20mm',
+                        color: 'Negro',
+                        application: 'Zonas ganaderas, alto tránsito, áreas húmedas, industria pesca, criaderos, agro industria, etc.',
+                        image1: '/img/product/alfombras/GM-422.jpg',
+                        image2: '/img/product/alfombras/GM-422_2.jpg',
+                        tagText: 'Bajo Proyecto de Importación'
                     },
                 ]}
             />

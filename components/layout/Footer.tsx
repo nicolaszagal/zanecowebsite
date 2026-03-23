@@ -14,7 +14,7 @@ export default function Footer() {
 
                         <div className="border-b-4 border-primary-500 pb-3">
                             <h2 className="text-lg md:text-xl font-semibold leading-tight">
-                                ALFOMBRAS ANTIFATIGA Y ANTIDESLIZANTE DE CAUCHO
+                                SOLUCIONES EN ALFOMBRAS Y PISOS DE CAUCHO
                             </h2>
                         </div>
                         <img src="/img/logo.png" alt="Logo" className="w-32 md:w-40 lg:w-48 object-contain"/>

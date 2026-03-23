@@ -68,6 +68,7 @@ export default function LosetasPage() {
                             "Borde de piscinas.",
                             "Complejos habitacionales, condominios.",
                             "Nidos y Colegios.",
+                            "Parques"
                         ].map((aplicacion) => (
                             <div key={aplicacion} className="flex items-start gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-primary-500 shrink-0">
