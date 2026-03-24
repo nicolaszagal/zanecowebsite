@@ -19,8 +19,8 @@ export default function Products() {
                     { title: "Losetas de Caucho", href: "/products/losetas", image: "/img/product/product2.jpg" },
                     { title: "Rollos de Caucho", href: "/products/rollos", image: "/img/product/product3.jpg" },
                     { title: "RaceTrack", href: "/products/race-track", image: "/img/product/product4.jpg" },
-                    { title: "Pediluvios", href: "/products/pediluvios", image: "/img/product/product5.jpg" },
-                    { title: "Grass Sintético", href: "/products/grass-sintetico", image: "/img/product/product6.jpg" },
+                    //*{ title: "Pediluvios", href: "/products/pediluvios", image: "/img/product/product5.jpg" },
+                    //{ title: "Grass Sintético", href: "/products/grass-sintetico", image: "/img/product/product6.jpg" },
                     { title: "Otros Productos", href: "/products/otros", image: "/img/product/product7.jpg" },
                 ]}
             />

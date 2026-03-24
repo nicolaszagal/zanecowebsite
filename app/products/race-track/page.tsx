@@ -20,13 +20,13 @@ export default function RaceTrack(){
             <ProductCardComponent
                 items={[
                     {
-                        title: 'Modelo GM - 902',
-                        description: 'Alfombra con broches laterales que permite la unión de varias',
-                        measure: '91.4cm x 91.4cm x 15mm',
-                        color: 'Negro',
-                        application: 'Áreas húmedas, cocinas, lavanderías, industria pesca, hospitales, criaderos, agro industria, etc.',
-                        image1: '/images/products/alfombras/alfombra-antifatiga.jpg',
-                        image2: '/images/products/alfombras/alfombra-antifatiga.jpg',
+                        title: 'Race Track',
+                        description: 'Sistema de rollo de caucho pre vulcanizado para pista atlética.',
+                        measure: 'Rollo de 15m x 1.22m x 13mm +/- 0.5mm. Capa superior de Caucho EPDM (Sintético) 3mm. Capa Inferior de Caucho Natural 10 mm. Rollos de 1.25m x 15m Dureza Shore A: 45 - 60A°. Adhesión: Adhesivo de Poliuretano',
+                        color: 'Verde, Azul , Gris y Terracota',
+                        application: 'Áreas deportivas, gimnasios, clubes deportivos.',
+                        image1: '/img/product/racetrack/racetrack.jpg',
+                        image2: '/img/product/racetrack/racetrack_2.jpg',
                     },
                 ]}
             />

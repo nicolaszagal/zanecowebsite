@@ -12,7 +12,7 @@ export default function HeroSlide({
     title: string;
     subtitle: string;
     description: string;
-    buttons: { text: string; variant?: "primary" | "secondary" }[];
+    buttons: { text: string; variant?: "primary" | "secondary"; href?: string }[];
 }) {
     return (
         <div className="relative h-[500px] w-full flex-shrink-0 flex items-center">
@@ -43,7 +43,8 @@ export default function HeroSlide({
                         <Button
                         key={index}
                         text={button.text}
-                        variant={button.variant}/>
+                        variant={button.variant}
+                        href={button.href}/>
                     ))}
                 </div>
             </div>

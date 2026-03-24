@@ -7,6 +7,7 @@ type ButtonVariant = "primary" | "secondary";
 type HeroButton = {
     text: string;
     variant?: ButtonVariant;
+    href?: string;
 };
 
 type HeroSlideType = {
@@ -14,16 +15,20 @@ type HeroSlideType = {
     title: string;
     subtitle: string;
     description: string;
+    category: string;
     buttons: HeroButton[];
 };
 
 export default function Hero() {
+    const whatsappLink = "https://wa.me/51994999955";
+
     const slides: HeroSlideType[] = [
         {
             backgroundImage: "/img/home/hero.jpg",
             title: "Mat de Caucho y Etil Vinil Acetato",
             subtitle: "Antifatiga y Antideslizante",
             description: "Ofrecen confort en estaciones de trabajo minimizando los índices de fatiga de los colaboradores.",
+            category: "alfombras",
             buttons: [
                 { text: "Ver Catálogo", variant: "primary" },
                 { text: "Solicitar Cotización", variant: "secondary" },
@@ -34,6 +39,7 @@ export default function Hero() {
             title: "Losetas de Caucho",
             subtitle: "Antigolpe y Antideslizante",
             description: "Piso antideslizante, posee una óptima resistencia al desliz incluso estando mojado.",
+            category: "losetas",
             buttons: [
                 { text: "Ver Catálogo", variant: "primary" },
                 { text: "Solicitar Cotización", variant: "secondary" },
@@ -41,15 +47,81 @@ export default function Hero() {
         },
         {
             backgroundImage: "/img/home/hero3.jpg",
-            title: "Alfombras  de Caucho",
+            title: "Alfombras de Caucho",
             subtitle: "Antifatiga Antideslizante",
             description: "LEY 29783. - Ley de seguridad y salud en el trabajo.",
+            category: "alfombras",
+            buttons: [
+                { text: "Ver Catálogo", variant: "primary" },
+                { text: "Solicitar Cotización", variant: "secondary" },
+            ],
+        },
+        {
+            backgroundImage: "/img/home/hero4.jpg",
+            title: "Pisos Temporales de HDPE",
+            subtitle: "Plataformas de trabajo o protección de suelos",
+            description: "Resistentes y ligeros, uso minero o para eventos.",
+            category: "otros",
+            buttons: [
+                { text: "Ver Catálogo", variant: "primary" },
+                { text: "Solicitar Cotización", variant: "secondary" },
+            ],
+        },
+        {
+            backgroundImage: "/img/home/hero5.jpg",
+            title: "Losetas de Vinil",
+            subtitle: "Áreas húmedas",
+            description: "Sistéma de drenaje con uniones laterales.",
+            category: "otros",
+            buttons: [
+                { text: "Ver Catálogo", variant: "primary" },
+                { text: "Solicitar Cotización", variant: "secondary" },
+            ],
+        },
+        {
+            backgroundImage: "/img/home/hero6.jpg",
+            title: "Precintos de seguridad",
+            subtitle: "Personalizable",
+            description: "Logo y numeración correlativa",
+            category: "otros",
+            buttons: [
+                { text: "Ver Catálogo", variant: "primary" },
+                { text: "Solicitar Cotización", variant: "secondary" },
+            ],
+        },
+        {
+            backgroundImage: "/img/home/hero7.jpg",
+            title: "Piso temporal de Polietileno de Alta densidad AB-012",
+            subtitle: "Piso antideslizante",
+            description: "Alto tránsito - Accesos y caminos.",
+            category: "otros",
+            buttons: [
+                { text: "Ver Catálogo", variant: "primary" },
+                { text: "Solicitar Cotización", variant: "secondary" },
+            ],
+        },
+        {
+            backgroundImage: "/img/home/hero8.jpg",
+            title: "Rollo de vinil para piscinas",
+            subtitle: "Piso antideslizante",
+            description: "Diseño tramado para drenado de líquidos",
+            category: "rollos",
             buttons: [
                 { text: "Ver Catálogo", variant: "primary" },
                 { text: "Solicitar Cotización", variant: "secondary" },
             ],
         }
     ];
+    const slidesWithLinks = slides.map((slide) => ({
+        ...slide,
+        buttons: slide.buttons.map((button) => ({
+            ...button,
+            href:
+                button.text === "Ver Catálogo"
+                    ? `/products/${slide.category}`
+                    : whatsappLink,
+        })),
+    }));
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -97,7 +169,7 @@ export default function Hero() {
                 className="flex transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-                {slides.map((slide, index) => (
+                {slidesWithLinks.map((slide, index) => (
                     <HeroSlide key={index} {...slide} />
                 ))}
             </div>
@@ -111,7 +183,7 @@ export default function Hero() {
                     &#8592;
                 </button>
                 <div className="flex gap-2 items-center">
-                    {slides.map((_, idx) => (
+                    {slidesWithLinks.map((_, idx) => (
                         <button
                             key={idx}
                             className={`w-3 h-3 rounded-full transition ${

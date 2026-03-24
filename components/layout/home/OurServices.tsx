@@ -1,5 +1,6 @@
 import Tag from "@/components/ui/Tag";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 export default function OurServices() {
     return (
@@ -8,7 +9,7 @@ export default function OurServices() {
 
                 <div className="max-w-7xl mx-auto text-center mb-16">
                     <h1>Nuestras Soluciones</h1>
-                    <h2 className="mx-auto max-w-xl mt-4">Especialistas en revestimientos industriales y comerciales. Productos diseñados para brindar seguridad y confort.</h2>
+                    <h2 className="mx-auto max-w-xl mt-4">Brindamos soluciones en pisos antifatiga y/o antideslizante con la finalidad de minimizar riesgos de accidentes y reducir índices de fatiga.</h2>
                 </div>
 
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -52,13 +53,13 @@ export default function OurServices() {
                         </ul>
 
                         <div className="mt-8">
-                            <Button text="Solicitar Cotización" variant="primary" />
+                            <Button text="Solicitar Cotización" variant="primary" href="https://wa.me/51994999955" />
                         </div>
                     </div>
 
                     {/* IMAGEN */}
                     <div>
-                        <img src="/img/home/service.jpg" alt="Servicio Principal" className="w-full h-auto rounded-2xl shadow-md object-cover"/>
+                        <img src="/img/home/solution.jpg" alt="Servicio Principal" className="w-full h-auto rounded-2xl shadow-md object-cover"/>
                     </div>
                 </div>
             </div>
@@ -83,7 +84,6 @@ export default function OurServices() {
                         </div>
                         <h3 className="text-xl font-semibold mb-3">Mantenimiento</h3>
                         <p className="text-lg text-gray-600 leading-relaxed flex-grow">Programa integral de mantenimiento que extiende la vida útil de los pisos con limpieza profesional y tratamientos especializados.</p>
-                        <a className="text-primary-500 pt-4">Conoce más →</a>
                     </div>
 
                     {/* CARD */}
@@ -97,7 +97,6 @@ export default function OurServices() {
                         </div>
                         <h3 className="text-xl font-semibold mb-3">Distribución y Logística</h3>
                         <p className="text-lg text-gray-600 leading-relaxed flex-grow">Entregas en Lima Metropolitana y según requerimientos del cliente dentro de los plazos establecidos.</p>
-                        <a className="text-accent-green pt-4">Conoce más →</a>
                     </div>
 
                     {/* CARD */}
@@ -111,7 +110,6 @@ export default function OurServices() {
                         </div>
                         <h3 className="text-xl font-semibold mb-3">Asesoría Técnica</h3>
                         <p className="text-lg text-gray-600 leading-relaxed flex-grow">Especialistas disponibles para asesorarte sobre la mejor opción de pisos según el tipo de negocio y flujo de personas.</p>
-                        <a className="text-accent-purple pt-4">Conoce más →</a>
                     </div>
 
                     {/* CARD */}
@@ -123,7 +121,6 @@ export default function OurServices() {
                         </div>
                         <h3 className="text-xl font-semibold mb-3">Importaciones Varias</h3>
                         <p className="text-lg text-gray-600 leading-relaxed flex-grow">Importaciones adaptadas a las necesidades del cliente bajo solicitud.</p>
-                        <a className="text-accent-orange pt-4">Conoce más →</a>
                     </div>
 
                 </div>
@@ -165,9 +162,13 @@ export default function OurServices() {
                                 <span className="flex items-center justify-center size-10 font-bold">✓</span>
                                 Asesoría personalizada
                             </li>
+                            <li className="flex items-center gap-4">
+                                <span className="flex items-center justify-center size-10 font-bold">✓</span>
+                                Fabricación personalizada de Mats Antifatiga
+                            </li>
                         </ul>
 
-                        <Button text="Contactar Ahora" variant="primary" />
+                        <Button text="Contactar Ahora" variant="primary" href="https://wa.me/51994999955"/>
                     </div>
                 </div>
             </div>

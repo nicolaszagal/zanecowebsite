@@ -12,6 +12,14 @@ export default function Customers() {
         "/img/customers/10.jpg",
         "/img/customers/11.jpg",
         "/img/customers/12.jpg",
+        "/img/customers/13.jpg",
+        "/img/customers/14.jpg",
+        "/img/customers/15.jpg",
+        "/img/customers/16.jpg",
+        "/img/customers/17.jpg",
+        "/img/customers/18.jpg",
+        "/img/customers/19.jpg",
+        "/img/customers/20.jpg",
     ]
 
     return (

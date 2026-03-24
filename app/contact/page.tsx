@@ -6,7 +6,7 @@ export default function Contact() {
         <section>
             <HeroComponent
                 title="Contáctanos"
-                description="Solicita cotizaciones, asesoría personalizada o si deseas ser nuestro distribuidor."
+                description="Solicita cotizaciones, administración y ventas, o si deseas ser nuestro distribuidor."
                 breadcrumbItems={[
                     { label: "Inicio", href: "/" },
                     { label: "Contacto" },
