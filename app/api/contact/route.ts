@@ -1,11 +1,66 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
+import type { Transporter } from "nodemailer"
 import { contactSchema } from "@/lib/contactSchema"
 
 const requests = new Map<string, number>()
 
+function createMailTransport(): Transporter | null {
+    const user = process.env.EMAIL_USER?.trim()
+    const pass = process.env.EMAIL_PASS
+
+    if (!user || !pass) {
+        return null
+    }
+
+    const host = process.env.EMAIL_HOST?.trim()
+
+    if (host) {
+        const port = Number.parseInt(process.env.EMAIL_PORT ?? "587", 10)
+        const p = Number.isFinite(port) ? port : 587
+        const secureFlag = process.env.EMAIL_SECURE
+        const secure =
+            secureFlag === "true" ||
+            secureFlag === "1" ||
+            p === 465
+
+        return nodemailer.createTransport({
+            host,
+            port: p,
+            secure,
+            auth: { user, pass },
+            tls: {
+                servername: host,
+            },
+        })
+    }
+
+    return nodemailer.createTransport({
+        service: "gmail",
+        auth: { user, pass },
+    })
+}
+
 export async function POST(req: Request) {
     try {
+
+        const emailTo = process.env.EMAIL_TO?.trim()
+        if (!emailTo) {
+            console.error("contact: set EMAIL_TO on the server")
+            return NextResponse.json(
+                { error: "Server misconfigured" },
+                { status: 503 }
+            )
+        }
+
+        const transporter = createMailTransport()
+        if (!transporter) {
+            console.error("contact: set EMAIL_USER and EMAIL_PASS on the server")
+            return NextResponse.json(
+                { error: "Server misconfigured" },
+                { status: 503 }
+            )
+        }
 
         const ip = req.headers.get("x-forwarded-for") || "unknown"
 
@@ -39,17 +94,12 @@ export async function POST(req: Request) {
             return NextResponse.json({ success: true })
         }
 
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS
-            }
-        })
+        const fromAddr =
+            process.env.EMAIL_FROM?.trim() || `"Contacto Web" <${process.env.EMAIL_USER}>`
 
         await transporter.sendMail({
-            from: `"Contacto Web" <${process.env.EMAIL_USER}>`,
-            to: process.env.EMAIL_TO,
+            from: fromAddr,
+            to: emailTo,
             subject: "Nueva consulta desde la web",
             html: `
         <h2>Nueva consulta</h2>

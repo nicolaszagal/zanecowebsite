@@ -35,8 +35,25 @@ export default function ContactForm() {
                 body: JSON.stringify(data)
             })
 
+            const payload = (await res.json().catch(() => ({}))) as {
+                error?: string
+            }
+
             if (!res.ok) {
-                throw new Error("Error al enviar")
+                if (res.status === 429) {
+                    setError("Demasiadas solicitudes. Espera unos segundos.")
+                } else if (res.status === 400) {
+                    setError("Revisa los datos del formulario.")
+                } else if (res.status === 503) {
+                    setError("El servicio no está disponible temporalmente.")
+                } else {
+                    setError(
+                        payload.error === "Too many requests"
+                            ? "Demasiadas solicitudes. Espera unos segundos."
+                            : "No se pudo enviar el mensaje."
+                    )
+                }
+                return
             }
 
             setSuccess(true)
