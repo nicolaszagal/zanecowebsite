@@ -13,7 +13,7 @@ export default function Otros(){
                     { label: 'Productos', href: '/products' },
                     { label: 'Otros Productos'}
                 ]}
-                imageUrl="/img/product/product7.jpg"
+                imageUrl="/img/product/product8.jpg"
                 breadcrumbVariant="secondary"
             />
             <OtrosPage/>
